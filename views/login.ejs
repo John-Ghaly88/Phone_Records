@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <style> 
+      body {
+        background-image: url("bg2.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        overflow-y: hidden;
+        overflow-x: hidden;
+      }
+      h1{
+        color: white;
+        text-align: center;
+        -webkit-text-stroke: 1px black;
+      }
+      .cont{
+        position: relative;
+        left: 600px;
+        top: 50px;
+        color: white;
+      }
+    </style>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LogIn</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+  <body>
+    <div class = "container">
+      <h1>Log In</h1>
+    </div>
+    <div class = "cont">
+      <form method = "POST"> 
+        Username: 
+        <br>
+        <input type="text" name = "username">
+        <br>
+        <br>
+        Password: 
+        <br>
+        <input type="password" name = "password">
+        <br>
+        <br>
+        <input type="submit" value = "LogIn">
+      </form>
+      <br>
+      <a href = "/registration" style="color: white;"> I dont have an account </a>
+      <br><br>
+      <a href = "/forgetPass" style="color: white;"> I forgot my password </a>
+    </div>
+  </body>
+</html>

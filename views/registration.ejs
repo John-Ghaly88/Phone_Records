@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <style> 
+      body {
+        background-image: url("bg2.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        overflow-y: hidden;
+        overflow-x: hidden;        
+      }
+      h1{
+        color: white;
+        text-align: center;
+        -webkit-text-stroke: 1px black;
+      }
+      .cont{
+        position: relative;
+        left: 600px;
+        top: 50px;
+        color: white;
+      }
+    </style>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+  <body>
+    <div class = "container">
+      <h1>Register</h1>
+    </div>
+    <div class = "cont">
+      <form method = "POST"> 
+        Email:
+        <br> 
+        <input type="text" name= "email"> <br>
+        <br>
+        Username: 
+        <br>
+        <input type="text" name = "username"> <br>
+        <br>
+        Your birthdate:
+        <br>
+        <input type="date" name = "birthdate"> <br>
+        <br>
+        Password: 
+        <br>
+        <input type="password" id="password" name = "password"> <br> <br>
+        <input type="submit" id="simple_click" class="btn btn-secondary" value = "Register"> <br>
+      </form>
+    </div>
+  </body>
+</html>

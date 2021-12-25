@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <script>
+    const onSubmitComment=()=>{
+      const successMessage = document.getElementById('success-comment');
+      successMessage.textContent = "Comment Added Successfully";
+    }
+  </script>
+  <head>
+    <style> 
+        .head{
+            text-align: center;
+            padding: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .body {
+          min-height: 100%;
+          height: 100%;
+          width: 100%;
+      }
+
+      .comment {
+            text-align: center;
+            padding: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            font-size: 40px;
+      }
+    </style>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comments</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+
+  <body>
+      <h1>Add a comment</h1>
+      <form method="POST" onsubmit="onSubmitComment()">
+          <h2>Comment:</h2>
+          <textarea required="" rows="12" cols="100" name="Comment" placeholder="Write your comment here..."></textarea>
+          <h2>Name:</h2>
+          <input required="" type="text" name="Name" placeholder="Your name">
+          <button type="submit">Post Comment</button>
+      </form>
+      <p style="color: green;" id="success-comment"></p>
+      <br>
+      <h2>Old Comments:</h2>
+        <% var obj = JSON.stringify(com); %>
+        <% var stringify = JSON.parse(obj); %>
+        <% for (var i = 0; i < stringify.length; i++){ %>
+        <%= stringify[i]['name'] %>
+        <%= ':' %>
+        <%= stringify[i]['comment'] %>
+        <br>
+        <% } %>
+  </body>
+</html>

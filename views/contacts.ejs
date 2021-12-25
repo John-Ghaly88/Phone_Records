@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <script>
+    const onSubmitContact=()=>{
+      const successMessage = document.getElementById('success-contact');
+      successMessage.textContent = "Contact Added Successfully";
+    }
+  </script>
+  <head>
+    <style> 
+        .head{
+            text-align: center;
+            padding: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .body {
+          min-height: 100%;
+          height: 100%;
+          width: 100%;
+      }
+
+      .comment {
+            text-align: center;
+            padding: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            font-size: 40px;
+      }
+    </style>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contacts</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+  <body>
+    <div class = "head">
+        <h1> Welcome to your contacts records</h1>
+        <form method="POST" action="/logout">
+          <button type="submit"> LogOut </button>
+        </form>
+        <br>
+        <img  id ="image" src="/contacts.jpg" width="500" height="200">
+    </div>
+
+    <div class = "comment">
+        <a href = "/comments"> Add a comment </a>
+    </div>
+
+    <div class = "body">
+        <h2> Add a new contact</h2>
+        <form method="POST" onsubmit="onSubmitContact()">
+            <input required="" name="Contact_Name" type="text" placeholder="Contact Name">
+            <input required="" name="Contact_No" type="text" placeholder="Contact Number">
+            <button type="submit"> Add </button>
+        </form>
+        <p style="color: green;" id="success-contact"></p>
+        <br><br><br>
+        <h2> Search for an existing contact</h2>
+        <form > 
+          <input required="" name="Cont_Name" type="text" placeholder="Contact Name">
+          <button type="submit"> Search </button>
+          <br>
+        </form>
+        <p>
+          <%= data.CNo %>
+        </p>
+    </div>
+  </body>
+</html>
