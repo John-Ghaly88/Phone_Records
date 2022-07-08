@@ -21,6 +21,7 @@ async function main() {
       console.log("connected to DB successfully");
     });
 }
+
 main().catch(console.error);
 var app = express();
 
